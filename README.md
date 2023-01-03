@@ -38,10 +38,11 @@ The pretrained and finetuned model on ImageNet-1K are available at [Google Drive
 Performance comparison on ImageNet-1K classification and ADE20K Semantic Segmentation. 
 |Method|Model Size| Top-1 | mIoU|
 |---|:---:|:---:|:---:|
-|MAE|ViT-T| 71.6 | -|
-|TinyMIM|ViT-T| 75.8 | -|
+|MAE|ViT-T| 71.6 | 37.6|
+|TinyMIM|ViT-T| 75.8 | 44.0
+|TinyMIM*|ViT-T| 79.6 | 45.0|
 |MAE|ViT-S| 80.6 | 42.8|
-|TinyMIM|ViT-S| 83.0 | 47.2|
+|TinyMIM|ViT-S| 83.0 | 48.4|
 |MAE|ViT-B| 83.6| 48.1|
 |TinyMIM|ViT-B| 85.0 | 52.2|
 
