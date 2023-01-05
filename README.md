@@ -1,6 +1,6 @@
 # TinyMIM
 
-This repository is the official implementation of our ["TinyMIM: An Empirical Study of Distilling MIM Pre-trained Models"]().
+This repository is the official implementation of our ["TinyMIM: An Empirical Study of Distilling MIM Pre-trained Models"](https://arxiv.org/abs/2301.01296).
 
 ## Pretraining
 We pretrain TinyMIM on 32 V100 GPU
@@ -61,3 +61,11 @@ Generalization comparison on out-of-domain dataset (ImageNet-A/R/C)
 
 If you have any question, feel free to contact [Sucheng Ren](https://oliverrensu.github.io/) :)
 
+@article{ren2023tinymim,
+    title={TinyMIM: An Empirical Study of Distilling MIM Pre-trained Models},
+    author={Sucheng Ren and Fangyun Wei and Zheng Zhang and Han Hu},
+    year={2023},
+    eprint={2301.01296},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
