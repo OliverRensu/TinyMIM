@@ -1,8 +1,17 @@
 # TinyMIM
 
-This repository is the official implementation of our ["TinyMIM: An Empirical Study of Distilling MIM Pre-trained Models"](https://arxiv.org/abs/2301.01296).
+This repository is the official implementation of our 
 
-## Pretraining
+**TinyMIM: An Empirical Study of Distilling MIM Pre-trained Models**
+
+[[arxiv](https://arxiv.org/abs/2301.01296)]
+
+by [Sucheng Ren](https://oliverrensu.github.io/), [Fangyun Wei](https://scholar.google.com/citations?user=-ncz2s8AAAAJ&hl=en), [Zheng Zhang](https://stupidzz.github.io/), [Han Hu](https://ancientmooner.github.io/)
+
+## 🛠 Installation
+We build the repo based on [MAE](https://github.com/facebookresearch/mae)
+
+## 🚀 Pretraining
 We pretrain TinyMIM on 32 V100 GPU
 ```
 python -m torch.distributed.launch \
@@ -32,7 +41,9 @@ python -m torch.distributed.launch --nproc_per_node=8 main_finetune.py \
     --dist_eval --data_path /path/to/imagenet
 ```
 ## Checkpoint
-The pretrained and finetuned model on ImageNet-1K are available at [Google Drive](https://drive.google.com/drive/folders/10L305AoXyBSjJK7WfhBlxi3PF2Ni31Yu?usp=sharing)
+The pretrained and finetuned model on ImageNet-1K are available at 
+
+[[Google Drive](https://drive.google.com/drive/folders/10L305AoXyBSjJK7WfhBlxi3PF2Ni31Yu?usp=sharing)]
 
 ## Comparison
 Performance comparison on ImageNet-1K classification and ADE20K Semantic Segmentation. 
@@ -60,7 +71,7 @@ Generalization comparison on out-of-domain dataset (ImageNet-A/R/C)
 ## ✍ Citation
 
 If you have any question, feel free to contact [Sucheng Ren](https://oliverrensu.github.io/) :)
-
+```
 @article{ren2023tinymim,
     title={TinyMIM: An Empirical Study of Distilling MIM Pre-trained Models},
     author={Sucheng Ren and Fangyun Wei and Zheng Zhang and Han Hu},
@@ -69,3 +80,4 @@ If you have any question, feel free to contact [Sucheng Ren](https://oliverrensu
     archivePrefix={arXiv},
     primaryClass={cs.CV}
 }
+```
