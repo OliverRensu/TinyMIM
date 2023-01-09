@@ -12,13 +12,13 @@ by [Sucheng Ren](https://oliverrensu.github.io/), [Fangyun Wei](https://scholar.
 We build the repo based on [MAE](https://github.com/facebookresearch/mae)
 
 ## 🚀 Pretraining
-We pretrain TinyMIM on 32 V100 GPU
+We pretrain TinyMIM on 32 V100 GPU with overall batch size of 4096 which is identical to that in MAE.
 ```
 python -m torch.distributed.launch \
 --nnodes 4 --node_rank $noderank \
 --nproc_per_node 8 --master_addr $ip --master_port $port \
 main_pretrain.py \
-    --batch_size 64 \
+    --batch_size 128 \
     --model tinymim_vit_base_patch16 \
     --epochs 300 \
     --warmup_epochs 15 \
