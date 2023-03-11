@@ -1,13 +1,20 @@
 # TinyMIM
 
+## 😎 Introduction
 This repository is the official implementation of our 
 
-**TinyMIM: An Empirical Study of Distilling MIM Pre-trained Models**
+**TinyMIM: An Empirical Study of Distilling MIM Pre-trained Models** (CVPR2023)
 
-[[arxiv](https://arxiv.org/abs/2301.01296)]
+[[arxiv](https://arxiv.org/abs/2301.01296)] [[code](https://github.com/OliverRensu/TinyMIM)]
 
-by [Sucheng Ren](https://oliverrensu.github.io/), [Fangyun Wei](https://scholar.google.com/citations?user=-ncz2s8AAAAJ&hl=en), [Zheng Zhang](https://stupidzz.github.io/), [Han Hu](https://ancientmooner.github.io/)
+*[Sucheng Ren](https://oliverrensu.github.io/), [Fangyun Wei](https://scholar.google.com/citations?user=-ncz2s8AAAAJ&hl=en), [Zheng Zhang](https://stupidzz.github.io/), [Han Hu](https://ancientmooner.github.io/)*
 
+> Small models that are critical for real-world applications but cannot or only marginally benefit from MIM pre-training. In this paper, we explore distillation techniques to transfer the success of large MIM-based pre-trained models to smaller ones. We systematically study different options in the distillation framework, including distilling targets, losses, input, network regularization, sequential distillation, etc, revealing that: 1) Distilling token relations is more effective than CLS token- and feature-based distillation; 2) An intermediate layer of the teacher network as target perform better than that using the last layer when the depth of the student mismatches that of the teacher; 3) Weak regularization is preferred.
+
+![method](figures/method.png)
+
+## News
+* Code and checkpoints for Semantic Segmentation are released!
 ## 🛠 Installation
 We build the repo based on [MAE](https://github.com/facebookresearch/mae)
 
@@ -28,7 +35,7 @@ main_pretrain.py \
     --data_path /path/to/imagenet 
 ```
 
-## Finetuning
+## Fine-tuning on ImageNet-1K (Classification)
 ```
 python -m torch.distributed.launch --nproc_per_node=8 main_finetune.py \
     --batch_size 128 \
@@ -40,6 +47,10 @@ python -m torch.distributed.launch --nproc_per_node=8 main_finetune.py \
     --weight_decay 0.05 --drop_path 0.2 --reprob 0.25 --mixup 0.8 --cutmix 1.0 \
     --dist_eval --data_path /path/to/imagenet
 ```
+
+## Fune-tuning on ADE20K (Semantic Segmentation)
+Please refer [Segmentation/README.md](./Segmentation/README.md)
+
 ## Checkpoint
 The pretrained and finetuned model on ImageNet-1K are available at 
 
