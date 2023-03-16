@@ -86,9 +86,8 @@ If you have any question, feel free to contact [Sucheng Ren](https://oliverrensu
 @article{ren2023tinymim,
     title={TinyMIM: An Empirical Study of Distilling MIM Pre-trained Models},
     author={Sucheng Ren and Fangyun Wei and Zheng Zhang and Han Hu},
-    year={2023},
-    eprint={2301.01296},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2023},
 }
 ```
