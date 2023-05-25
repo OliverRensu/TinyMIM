@@ -83,11 +83,12 @@ Generalization comparison on out-of-domain dataset (ImageNet-A/R/C)
 
 If you have any question, feel free to contact [Sucheng Ren](https://oliverrensu.github.io/) :)
 ```
-@article{ren2023tinymim,
-    title={TinyMIM: An Empirical Study of Distilling MIM Pre-trained Models},
-    author={Sucheng Ren and Fangyun Wei and Zheng Zhang and Han Hu},
+@InProceedings{Ren_2023_CVPR,
+    author    = {Ren, Sucheng and Wei, Fangyun and Zhang, Zheng and Hu, Han},
+    title     = {TinyMIM: An Empirical Study of Distilling MIM Pre-Trained Models},
     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
     month     = {June},
     year      = {2023},
+    pages     = {3687-3697}
 }
 ```
